@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="liquor store">
+    <meta name="description" content="inventory management system">
+    <title>LIS|dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/asset/css/all.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- side panel -->
+
+    <div class="side-panel">
+
+        <!-- avator / image -->
+        <div class="avator">
+            <i class="fa-solid fa-user" style="font-size: 100px; color: #f7f4f4;"></i>
+            <div class="profile-title">
+                <h5>Habari Rich!</h5>
+            </div>
+        </div>
+
+        <!-- menu holders -->
+         <div class="menu">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="index.php" class="nav-link">Dashibodi</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="" class="nav-link">Ongeza Vinywaji</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="managestock.php" class="nav-link">Tazama Stock</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="recordsales.php" class="nav-link">Rekodi Mauzo</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="" class="nav-link">Ripoti za Mauzo</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="" class="nav-link">Taarifa za upungufu wa Stock</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="" class="nav-link">Ondoka / Logout</a>
+                </li>
+            </ul>
+         </div>
+    </div>
+
+    <!-- center navigation -->
+
+    <div class="container-fluid p-3 text-center" style="background-color: #f7f4f4;">
+        <h2 style="color: #552834;">RICH SHOP (VINYWAJI)</h2>
+    </div>
+
+    <!-- container form for manage user inputs -->
+
+    <div class="form-container">
+        <div class="sub-title">
+            <p>Ongeza Vinywaji / Bidhaa</p>
+        </div>
+
+        <!-- form -->
+
+        <div class="form">
+            <form action=""  name="Myform" id="form" method="POST" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+                <label for="" class="form-label m-2">Chagua Bidhaa / Kinywaji</label>
+                <select name="product_item" id="" class="form-control" required>
+                    <option  disabled selected>Chagua</option>
+                    <option value="Safari Lager (Kubwa)">Safari Lager (kubwa)</option>
+                    <option value="Safari Lager (ndogo)">Safari Lager (ndogo)</option>
+                    <option value="Kilimanjaro (kubwa)">Kilimanjaro (kubwa)</option>
+                    <option value="Kilimanjaro (ndogo)">Kilimanjaro (ndogo)</option>
+                    <option value="Pepsi">Pepsi</option>
+                    <option value="Cocacola">Cocacola</option>
+                    <option value="Mirinda Nyeusi">Mirinda Nyeusi</option>
+                    <option value="Mirinda Orange">Mirinda Orange</option>
+                    <option value="Fanta Orange">Fanta Orange</option>
+                    <option value="Malta">Malta</option>
+                    <option value="Konyagi Kubwa">Konyagi Kubwa</option>
+                    <option value="Konyagi Ndogo">Konyagi Ndogo</option>
+                    <option value="Sigara-sports">Sigara-sports</option>
+                    <option value="Sigara-kali">Sigara-kali</option>
+                    <option value="Sigara-master">Sigara-master</option>
+                </select>
+                <p id="field-1"></p>
+
+                <label for="" class="form-label m-2">Kategori / Aina</label>
+                <select name="category" id="" class="form-control" required>
+                    <option  disabled selected>Chagua</option>
+                    <option value="Kilevi">Kilevi</option>
+                    <option value="Soda/Kinywaji laini">Soda / Kinywaji laini</option>
+                    <option value="Vinginevyo">Vinginevyo</option>
+                </select>
+                <p id="field-2"></p>
+
+                <label for="" class="form-label m-2">Uniti</label>
+                <select name="Uniti" id="" class="form-control" required>
+                    <option  disabled selected>Chagua</option>
+                    <option value="Pc">Pc</option>
+                    <option value="Box">Box</option>
+                    <option value="Kreti">Kreti</option>
+                    <option value="Chupa">Chupa</option>
+                    <option value="Katoni">Katoni</option>
+                    <option value="Vinginevyo">Vinginevyo</option>
+                </select>
+
+                <label for="" class="form-label m-2">Pc's</label>
+                <select name="piece" id="" class="form-control" required>
+                    <option  disabled selected>Chagua</option>
+                    <option value="Chupa">Chupa</option>
+                    <option value="Vinginevyo">Vinginevyo</option>
+                </select>
+                <div id="field-3"></div>
+
+                <label for="" class="form-label m-2">Idadi / Quantity</label>
+                <input type="number" name="quantity" id="quantity" class="form-control" required>
+                <p id="field-4"></p>
+
+                <label for="" class="form-label m-2">Bei ya kununulia</label>
+                <input type="number" name="buying_price" id="buying_price" class="form-control" required>
+                <p id="field-5"></p>
+
+                <label for="" class="form-label m-2">Jumla</label>
+                <input type="text" name="total_price" value="" id="total_price" class="form-control" readonly>
+                <p id="field-6"></p>
+
+                <label for="" class="form-label m-2">Bei ya kuuzia</label>
+                <input type="number" name="selling_price" id="" class="form-control" required>
+                <p id="field-7"></p>
+
+                <div class="container d-flex justify-content-between">
+                    <button type="submit" name="add" id="add" class="btn btn-success mt-3 p-2">Ongeza</button>
+                    <!-- <button type="button"  id="" class="btn btn-success mt-3 p-2" onclick="calculateTotal();">calculate</button> -->
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script src="../javascript/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
